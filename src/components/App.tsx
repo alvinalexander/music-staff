@@ -3,6 +3,7 @@ import { makeStyles, createStyles, Theme } from '@material-ui/core/styles';
 import Paper from '@material-ui/core/Paper';
 import Grid from '@material-ui/core/Grid';
 import Settings from './settings';
+import Staff from './staff'
 import { Input } from 'webmidi';
 
 
@@ -12,9 +13,10 @@ const useStyles = makeStyles((theme: Theme) =>
       flexGrow: 1,
     },
     paper: {
-      padding: theme.spacing(3),
+      padding: theme.spacing(4),
       height: "100vh",
-      borderTop: "none"
+      width: "100vw",
+      borderTop: "none",
     },
 
   }),
@@ -38,7 +40,7 @@ const App: FunctionComponent<AppProps> = ({midiInputs, makeActive}) => {
           </Grid>
           <Grid item xs={9}>
             <Paper className={classes.paper}>
-              Staff Goes Here ...
+              <Staff/>
             </Paper>
           </Grid>
         </Grid>

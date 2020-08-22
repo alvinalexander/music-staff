@@ -29,7 +29,6 @@ const MidiDevices: FunctionComponent<MidiDevicesProps> = ({devices, onDeviceSele
     const [midiDevice, setMidiDevice] = React.useState('');
 
     const handleChange = (event: React.ChangeEvent<{ value: unknown }>) => {
-        console.log(event)
         const midiDeviceName = event.target.value as string 
         onDeviceSelect(midiDeviceName)
         setMidiDevice(event.target.value as string);
